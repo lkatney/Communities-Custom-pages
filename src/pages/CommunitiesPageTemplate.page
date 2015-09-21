@@ -1,0 +1,144 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false" controller="CommunitiesLogicController">
+<!--====================================================
+    Name:  CommunitiesPageTemplate                                               
+========================================================
+========================================================
+    Purpose:                                                              
+    Template for Login, forgot password, forgot password 
+    confirmation & change password pages                                                           
+========================================================
+========================================================
+========================================================-->
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        <title>Demo</title>
+        <apex:insert name="styles"/>
+        <style>
+            html , body{
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                -webkit-overflow-scrolling : auto;
+                -webkit-overflow-scrolling : touch;
+                color: #7C7B7B;
+            }
+            p{
+                margin : 0;
+            }
+            #container{
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+
+            #container{
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            #title-2{
+                font-size: 35px;
+                margin-top: 125px;
+            }
+
+
+
+            #title-2{
+                line-height: 0 auto;
+                font-weight: bold;
+                text-align:center;
+            }
+
+            #title-4{
+                font-size: 20px;
+                line-height: 0 auto;
+                font-weight: normal;
+                text-align:center;
+                padding: 25px 0;
+            }
+
+            #heading{
+                font-size: 16px;
+                padding: 10% 12px 20px;
+            }
+
+            .list-inset{
+                margin : 0;
+            }
+           
+            #panel{
+                font-size: 12px;
+                font-weight: normal;
+                line-height: 0 auto;
+                text-align: center;
+                margin-top: 30px
+            }
+
+            .list, .list .item, .list .item input{
+                background : transparent;
+                font-size: 18px;
+            }
+
+            .list .item{
+                height: 60px;
+                width :100%;
+            }
+
+            input[type="submit"], .registration_links{
+                font-size: 17px ;
+                line-height: 0 auto;
+                font-weight: normal;
+                border-radius: 4px;
+                border: 0;
+                width :100%;
+                height: 55px;
+                background-color: #2683C5;
+                color: #FFF;
+            }
+
+            input[type="text"], input[type="password"]{
+                font-size: 17px ;
+                line-height: normal;
+                width: 100%;
+                height: 45px;
+            }
+
+            #link-container, #submit{
+                 margin-top: 20px !important;
+            }
+
+            .error-msg{
+                color :#da0e17;
+            }
+
+            a{
+                font-size: 16px;
+                line-height: 0 auto;
+                text-align: left;
+                font-weight: normal;
+                color: #0095ff;
+                text-decoration: none !important;
+            }
+
+            label{
+                font-size: 16px;
+            }
+
+            .center{
+                text-align  : center;
+                margin      : 0 auto; 
+            }
+        </style>
+        <apex:insert name="scripts"/>
+    </head>
+    <body>
+        <div id="container">
+            <apex:insert name="title"/>
+            <apex:form forceSSL="true" >
+                <apex:messages styleClass="error-msg"/>
+                <apex:insert name="form"/>
+            </apex:form>
+        </div>
+    </body>
+</apex:page>

@@ -1,0 +1,48 @@
+<apex:page controller="CommunitiesLogicController" showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+     <apex:composition template="CommunitiesPageTemplate">
+        <apex:define name="title">
+            <p id="title-2">Register</p>
+        </apex:define>
+        <apex:define name="styles">
+        <style>
+            #help_container{
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        </style>
+        </apex:define>
+        <apex:define name="form">
+            <div class="list list-inset form">
+                <div class="item item-input">
+                  <apex:inputText id="InputFirstName" html-placeholder="First name" value="{!newUser.Firstname}"/>
+                </div>
+                <div class="item item-input">
+                  <apex:inputText html-type="text" id="InputLastName" html-placeholder="Last name" value="{!newUser.Lastname}"/>
+                </div>
+                <div class="item item-input">
+                   <apex:inputText html-type="email" id="InputUsername" html-placeholder="Username" value="{!newUser.Username}"/>
+                </div>
+                <div class="item item-input">
+                  <apex:inputText html-type="tel" id="InputPhone" html-placeholder="Phone" value="{!newUser.Phone}"/>
+                </div>
+                <div class="item item-input">
+                  <apex:inputText html-type="email" id="InputEmail" html-placeholder="Email" value="{!newUser.Email}"/>
+                </div>
+                <div class="item item-input">
+                  <apex:inputText html-type="secret" id="InputOptPassword" html-placeholder="Password (Optional)" value="{!optPassword}"/>
+                </div>
+                <div class="item item-input">
+                  <apex:inputText html-type="secret" id="InputOptConfirmPassword" html-placeholder="Confirm Password (Optional)" value="{!optConfirmPassword}"/>
+                </div>
+                  <div>
+                    <apex:commandButton tabindex="2" id="Save" styleclass="button button-full button-dark" value="Register" action="{!registerUser}"/>
+                    <div id="link-container" class="center">
+                        <div>
+                          <apex:commandLink value="Return to login" action="{!openHome}"/>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </apex:define>
+    </apex:composition>
+</apex:page>

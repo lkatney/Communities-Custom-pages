@@ -1,0 +1,34 @@
+<apex:page controller="CommunitiesLogicController" showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+<!--====================================================
+	Name:  FMPLogout                                               
+========================================================
+========================================================
+	Purpose:                                                              
+	Custom logout page for communities                                                           
+========================================================
+========================================================-->
+	<apex:composition template="CommunitiesPageTemplate">
+		<apex:define name="scripts">
+			<script>
+				setTimeout("redirectToLogin()", 3000);
+			</script>
+		</apex:define>
+		<apex:define name="styles">
+			<style>
+				#heading{
+					padding: 40px 0 40px !important;
+					text-align: center;
+				}
+			</style>
+		</apex:define>
+		<apex:define name="title">
+			<p id="title-2">Logged out!</p>
+			<p id="heading">
+					You have been successfully logged out.
+			</p>
+		</apex:define>
+		<apex:define name="form">
+			<apex:actionFunction name="redirectToLogin" action="{!forwardToStartPage}"/>
+		</apex:define>
+	</apex:composition>
+</apex:page>

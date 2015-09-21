@@ -1,0 +1,40 @@
+<apex:page controller="CommunitiesLogicController" showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+<!--====================================================
+========================================================
+========================================================
+	Purpose:                                                              
+	Page to show once registration is complete                                    
+========================================================
+========================================================-->
+	<apex:composition template="CommunitiesPageTemplate">
+		<apex:define name="styles">
+			<style>
+				#heading{
+					padding: 40px 0 40px !important;
+					text-align: center;
+				}
+				img{
+					width: inherit;
+					height: inherit;
+				}
+				.registration_links{
+                	width: 165px !important;
+	                margin: 0 0.9% 20px 0;
+					display: inline-block;
+				}
+				a.registration_links{
+                	background-color: #FFF;
+				}
+			</style>
+		</apex:define>
+		<apex:define name="title">
+			<p id="title-2">Thank You!</p>
+			<p id="heading">
+					You have successfully completed your registration and signed in.<br/><br/>
+			</p>
+			<apex:form styleClass="center">
+				<apex:commandButton styleclass="button button-dark registration_links" action="{!openHome}" value="Home"/>
+			</apex:form>
+		</apex:define>
+	</apex:composition>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page >
+<head>
+    <title>Home Page</title>
+</head>
+<h1>Home Page</h1>
+</apex:page>

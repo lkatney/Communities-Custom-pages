@@ -1,0 +1,30 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false">
+<!--====================================================
+    Name:  Confirmation                                                
+========================================================
+========================================================
+    Purpose:                                                              
+    Custom confirmation page for login & forgot password for community with branding                                                              
+========================================================
+========================================================-->
+    <apex:composition template="CommunitiesPageTemplate">
+        <apex:define name="styles">
+            <style>
+                #heading{
+                    padding: 40px 0 40px !important;
+                    text-align: center;
+                }
+            </style>
+        </apex:define>
+        <apex:define name="title">
+            <p id="title-2">Email Sent</p>
+            <p id="heading">
+                    You have been sent an email with a URL.<br/><br/>
+                    Please follow link to create a new password.
+            </p>
+            <div id="link-container" class="center">
+                <apex:outputLink value="/Home">Return to login</apex:outputLink>
+            </div>
+        </apex:define>
+    </apex:composition>
+</apex:page>

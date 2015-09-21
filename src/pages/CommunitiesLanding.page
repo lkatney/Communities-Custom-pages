@@ -1,0 +1,17 @@
+<apex:page controller="CommunitiesLogicController" action="{!forwardToStartPage}" title="{!$Label.site.site_login}">
+<!--====================================================
+	Name:  FMPCommunitiesLanding                                           
+	Copyright notice:                                                       
+========================================================
+========================================================
+	Purpose:                                                              
+	Checks for user session and show login or home page 
+	according to session                                                              
+========================================================
+========================================================
+History                                                                
+                                                              
+	VERSION  		AUTHOR          DATE        DETAIL               RELEASE/CSR 
+	  1.0      Lakshay Katney    04/12/2014  INITIAL DEVELOPMENT               
+========================================================-->
+</apex:page>
